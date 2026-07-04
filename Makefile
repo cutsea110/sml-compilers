@@ -10,3 +10,6 @@ src/Eval.o: src/Eval.sml src/TM.smi src/Eval.smi
 	$(SMLSHARP) $(SMLFLAGS) -o src/Eval.o -c src/Eval.sml
 src/Main.o: src/Main.sml src/TM.smi src/Eval.smi src/Main.smi
 	$(SMLSHARP) $(SMLFLAGS) -o src/Main.o -c src/Main.sml
+clean:
+	rm Main src/*.o
+
