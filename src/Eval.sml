@@ -1,11 +1,11 @@
 structure Eval =
 struct
-  fun Hd nil      = TM.B
-    | Hd (h :: _) = h
+  fun Hd nil       = TM.B
+    | Hd (hd :: _) = hd
   fun Tl nil       = nil
     | Tl (_ :: tl) = tl
   fun Cons (TM.B, nil) = nil
-    | Cons (hd, tl) = hd :: tl
+    | Cons (hd, tl)    = hd :: tl
   fun moveL (LList, h, RList) =
     (Tl LList, Hd LList, Cons (h, RList))
   fun moveR (LList, h, RList) =
