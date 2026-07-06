@@ -7,6 +7,6 @@ struct
   type program = Q * delta
   type tape = S list * S * S list
   val P = (M, [((M, I), (M, O, L)),
-               ((M, O), (M, I, L)),
+               ((M, O), (H, I, L)),
 	       ((M, B), (H, I, L))])
 end
