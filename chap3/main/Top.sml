@@ -13,4 +13,10 @@ struct
 	 TextIO.closeIn inStream
       end
       handle ReadString.EOF => ()
+  fun topWithStdIn () =
+      let val inStream = TextIO.stdIn
+      in readAndPrintLoop inStream
+	 TextIO.closeIn inStream
+      end
+      handle ReadString.EOF => ()
 end

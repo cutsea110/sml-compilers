@@ -3,4 +3,5 @@ _require "../readstring/ReadString.smi"
 structure Top =
 struct
   val top : string -> unit
+  val topWithStdIn : unit -> unit
 end
